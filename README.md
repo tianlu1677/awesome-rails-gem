@@ -3,23 +3,93 @@
 
 * [Rails Gem List](#rails-gem-list)
   * [User](#user)
+    - [Devise](https://github.com/plataformatec/devise/) 用户登录注册
+    - [Clearance](https://github.com/thoughtbot/clearance) 简易版本的用户的登录注册
+    - [Devise JWT](https://github.com/waiting-for-dev/devise-jwt) 用户登录注册使用token
+    - [Pundit](https://github.com/elabs/pundit) 权限验证， 推荐使用这个
+    - [cancancan](https://github.com/CanCanCommunity/cancancan) cancancan
   * [Active Record](#active-record)
+    - [Enumerize](https://github.com/brainspec/enumerize) 列出所有可能的列
+    - [FriendlyId](https://github.com/norman/friendly_id) url友好
+    - [paranoia](https://github.com/rubysherpas/paranoia) 软删除
+  * [Server](#server)
+    - [puma]
+    - [nginx]
+    - [Docker]
+  * [Cache](#cache)
+    - [redis]() redis数据库
+    - [redis-objects]() redis的对象，方便存储临时性数据
+    - [redis-rails]() 使用redis做rails的缓存
+    - [second_level_cache]() 二级缓存
+    - [actionpack-action_caching]()  action级别的缓存
+  * [Database](#database)
+    - [pg]() postgres 数据库
+    - [pghero]() 数据库监控
+    - [rails_db](https://github.com/igorkasyanchuk/rails_db) 在线直接查询数据库
+    - [mysql2]() mysql数据库
+
   * [Plugins](#plugins)
+    - [ActsAsTaggableOn](https://github.com/mbleigh/acts-as-taggable-on) 打标签
+    - [kaminari](https://github.com/amatsuda/kaminari) 分页
   * [API](#api)
+    - [ActiveModel::Serializers](https://github.com/rails-api/active_model_serializers)
+    - [Jbuilder](https://github.com/rails/jbuilder)
+    - [Jbuilder_cache_multi]()
+    - [rest-client](https://github.com/rest-client/rest-client)
+    - [rack-attack]() 防止被攻击
+    - [rack-cors]() 跨域
+    - [api-pagination] api分页
+
   * [Email](#email)
   * [File Uploading](#file-uploading)
+    - [Carrierwave](https://github.com/carrierwaveuploader/carrierwave) 文件上传
+    - [Carrierwave qiniu] 文件上传到七牛
+    - [Carrierwave aliyun] 文件上传到阿里云
+    - [carrierwave_backgrounder](https://github.com/lardawge/carrierwave_backgrounder) 
+    - [MiniMagick](https://github.com/minimagick/minimagick) 裁剪图片
   * [Searching](#searching)
+    - [ransack](https://github.com/activerecord-hackery/ransack) 对象级别的搜索
+    - [pg_search](https://github.com/Casecommons/pg_search) 全局搜索
+    
   * [Scheduled/Recurrence Jobs](#scheduledrecurrence-jobs)
+    - [sidekiq](https://github.com/tobiassvn/sidetiq) 后台任务队列
+    - [sidekiq-cron](https://github.com/ondrejbartas/sidekiq-cron) 定时任务队列    
+    - [sidekiq-failures](https://github.com/mhfs/sidekiq-failures)  队列出错的详细信息
+    - [Whenever](https://github.com/javan/whenever) - 可不用sidekiq，crontab
   * [View Helper](#view-helper)
+    - [Simple Form](https://github.com/plataformatec/simple_form) 
+    - [cocoon](https://github.com/nathanvda/cocoon)  嵌套form的表单
   * [Environment Variables](#environment-variables)
+    - [Figaro](https://github.com/laserlemon/figaro) 使用环境变量来存储
   * [Admin Panel](#admin-panel)
+    - [administrate](https://github.com/thoughtbot/administrate) 简易后台程序
   * [Logging](#logging)
   * [Debug](#debug)
+    - [pry]
+    - [pry-rails]
+
   * [Coding Style](#coding-style)
+    - [RuboCop](https://github.com/bbatsov/rubocop)
   * [Testing](#testing)
+    - [rspec-rails](https://github.com/rspec/rspec-rails) 
+    - [factory_bot_rails](https://github.com/thoughtbot/factory_bot_rails) 创建测试对象
+    - [Database Cleaner](https://github.com/DatabaseCleaner/database_cleaner) 清除数据库
+    - [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers)
+    - [Timecop](https://github.com/travisjeffery/timecop) 锁定时间
+    - [brakeman](https://github.com/presidentbeef/brakeman) 检查语法安全
+    - [bundle-audit](https://github.com/rubysec/bundler-audit) 检查gem是不是有安全性的版本更新
   * [Production](#production)
   * [Error Logging](#error-logging)
-  * [Database](#database)
+  * [Frontend](#frontend)
+    - [slim]
+    - [jquery-rails]
+    - [bootstrap] 样式效果
+    - [bootstrap-datepicker-rails] 选择日期
+    - [select2-rails] 选择
+    - [coreui] 后台的样式效果
+    - [toastr-rails] 消息提醒
+    - [jsoneditor-rails] json编辑器
+    - [richexitor] 富文本编辑器
 
 ## User
 
@@ -41,6 +111,21 @@
 * [omniauth-twitter](https://github.com/arunagw/omniauth-twitter)
 * [omniauth-github](https://github.com/intridea/omniauth-github)
 * [omniauth-linkedin-oauth2](https://github.com/decioferreira/omniauth-linkedin-oauth2)
+
+## Database
+* [pg]()
+* [pghero]
+* [rails_db](https://github.com/igorkasyanchuk/rails_db) - Rails Database Viewer and SQL Query Runner
+
+## Cache
+* [redis]
+* [redis-objects]
+* [redis-rails]
+* [second_level_cache]
+* [actionpack-action_caching]
+
+## API about
+
 
 ## Active Record
 * [Enumerize](https://github.com/brainspec/enumerize) - Enumerated attributes with I18n and ActiveRecord/Mongoid support. It can be integrated with Simple Form.
@@ -85,9 +170,12 @@
 
 ## API
 * [ActiveModel::Serializers](https://github.com/rails-api/active_model_serializers) - Serializer brings convention over configuration to your JSON generation.
-* [Jbuilder](https://github.com/rails/jbuilder) - Jbuilder gives you a simple DSL for declaring JSON structures that beats massaging giant hash structures. This is particularly helpful when the generation process is fraught with conditionals and loops.
-* [rest-client](https://github.com/rest-client/rest-client) - Simple HTTP and REST client for Ruby, inspired by microframework syntax for specifying actions.
-
+* [Jbuilder](https://github.com/rails/jbuilder)
+* [jbuilder_cache_multi]()
+* [rest-client](https://github.com/rest-client/rest-client)
+* [api-pagination]
+* [rack-attack]()
+* [rack-cors]()
 
 ## Email
 * [letter_opener](https://github.com/ryanb/letter_opener) - Preview mail in the browser instead of sending.
@@ -176,5 +264,13 @@ ResponseCodeMatchers provides rspec matchers to match http response code.
 ## Error Logging
 * [Rollbar](https://github.com/rollbar/rollbar-gem) - Exception tracking and logging from Ruby to Rollbar.
 
-## Database
-* [rails_db](https://github.com/igorkasyanchuk/rails_db) - Rails Database Viewer and SQL Query Runner
+## Frontend
+* [slim]
+* [bootstrap]
+* [bootstrap-datepicker-rails]
+* [select2-rails]
+* [croeui]
+* [toastr-rails]
+* [jsoneditor-rails]
+* [richexitor]
+
